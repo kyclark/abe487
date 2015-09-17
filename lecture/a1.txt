@@ -1,0 +1,11 @@
+1.  Title of the paper and authors
+
+2.  Define the general topic, issue, or area of research (3-4 
+    sentences max)
+
+3.  What methods are they using to approach this problem (a bulleted
+    list works well)?
+
+4.  What are the overall conclusions the authors reach? (3-4 sentences)
+
+5.  How does this advance research in your metagenomics topic area?

@@ -1,0 +1,94 @@
+Perl III Problem Set
+====================
+ 
+1.  Create a script that divides two numbers provided on the command line.
+        Your script should have the following requirements:
+    Two numbers are required.
+    The numbers have to be positive.
+    The divisor cannot be zero.
+ 
+        You should take care of the following in your Perl script
+        =========================================================
+    Write the quotient to STDOUT
+    Write any errors to STDERR
+ 
+        You should take care of the following on the command line in UNIX
+        ==================================================================
+    Redirect STDOUT to an output file (out.txt)
+    Redirect STDERR to an error file (err.txt)
+ 
+2. Open a file using the open function.
+        As you read in lines from the file, make all the letters in each line uppercase.
+        (There's a built-in Perl function which will do this.)
+ 
+        Open a new file for output using the open function.
+    Write the output to this file 
+ 
+3. Open the provided FASTA file. Print the reverse complement of each
+    sequence. Make sure to print the output in fasta format including
+    the sequence name and a note in the description that this is the
+    reverse complement. Print to STDOUT and capture the output into a file
+    with a command line redirect '>'.
+ 
+4. Open the provided FASTQ file. Go through each line of the file. Count
+    the number of lines and the number of characters per line.
+ 
+    Have your program report the:
+         a. total number of lines
+         b. total number of characters
+         c. average line length 
+ 
+5. Create a script that uses <> to read in the contents of the provided
+    text file, Perl_III.nobody.txt. Use the function index() to
+ 
+      a. find the first position of 'Nobody' on every line
+      b. find the first position of 'somebody' on every line
+ 
+    Use the warn() function to warn the user that 'somebody is here'
+ 
+** You can look up how to use the index() and warn() functions in your books, google, or from the command line with the perldoc command, or on perldoc.org.
+
+**** EXTRA CREDIT *** 
+6.  Create a file of numbers call numbers.txt with the following content:
+
+22
+45
+1
+2
+31
+32
+72
+24
+ 
+ 
+Create a script that processes the numbers.txt as followes:
+Here is the pseudo-code:
+ 
+create file myresult.txt and open it for writing output
+ 
+open numbers.txt for reading
+ 
+while (each line of the file numbers.txt) {
+ 
+  if (the number is even) {
+ 
+    if (the number is less than 24) {
+ 
+       print the line to STDOUT
+ 
+    }
+ 
+  }
+  else {
+ 
+    compute the factorial of the number
+ 
+    print the factorial to the file myresult.txt (one per line)
+ 
+  }
+ 
+}
+ 
+        a. What will be printed to STDOUT?
+        b. What will be the contents of myresult.txt?
+        c. Convert the pseudocode above into a real program.

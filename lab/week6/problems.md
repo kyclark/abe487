@@ -1,7 +1,12 @@
 # Perl IV Problem Set
 
-Create a directory called "week5."  For each problem, create a script
+Create a directory called "week6."  For each problem, create a script
 with the given name.
+
+To receive credit, the scripts must compile and produce the expected 
+output.  Programs that take command-line arguments will be tested 
+with different arguments than given here, so try your programs with 
+different input.
 
 ## 01-mod.pl
 

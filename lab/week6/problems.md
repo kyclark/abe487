@@ -115,7 +115,7 @@ Expected output:
 
 ## 07-gc.pl
 
-- Take sequences from the command line
+- Take one or more sequences from the command line
 - Print the length of the sequence
 - Print a count of the number of C's and G's
 - Print the calculated GC content as a percent.
@@ -154,7 +154,7 @@ Expected output:
 
 ## 07-snps.pl
 
-- Take (only) two sequence from the command line 
+- Take (only) two sequences from the command line 
 - Make sure they are equal in length
 - Find the single-nucleotide variations (SNPs), reporting the position
   (in starting from position "1" not zero!) and the change from the 

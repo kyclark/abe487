@@ -1,0 +1,16 @@
+1) What's the difference between using single and double quotes with 
+   the "print" function?
+
+Single quotes will not interpolate escape characters (\t, \n, etc.) or
+variables -- these will be printed literally as they appear.
+
+2) Name at least one way to get Perl to execute a shell command such as "ls."
+
+system("ls");
+
+my $dir_listing = `ls`;
+
+3) Describe how "use strict" alters the way Perl makes you write code.
+
+It makes Perl complain if variables are not declared thereby preventing
+one from accidentally misspelling a variable name.

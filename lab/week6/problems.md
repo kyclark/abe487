@@ -123,7 +123,7 @@ Expected output:
 
 Expected output:
 
-    $ perl 06-gc.pl
+    $ perl 07-gc.pl
     Please provide a sequence.
 
     $ perl 07-gc.pl GCGTGCTAGCAATACGATAAACCGG
@@ -152,7 +152,7 @@ Expected output:
     #GC   : 12
     %GC   : 85.7142857142857
 
-## 07-snps.pl
+## 08-snps.pl
 
 - Take (only) two sequences from the command line 
 - Make sure they are equal in length

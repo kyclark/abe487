@@ -179,3 +179,18 @@ Expected output:
     Pos 3: C => T
     Pos 4: T => C
     Found 2 SNPs.
+
+## Extra Credit
+
+Modify 08-snps.pl to graphically show the SNPs:
+
+    $ perl 08-snps.pl AACT AATC
+    A A C T
+    | | * *
+    A A T C
+
+## No credit, but fun (for certain values of "fun")
+
+Go crazy: Find ORFs and highlight consequential SNPs (changes that 
+will affect the protein sequence moving from the first to the second
+sequence).

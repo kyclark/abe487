@@ -184,7 +184,7 @@ Expected output:
 
 Modify 08-snps.pl to graphically show the SNPs:
 
-    $ perl 08-snps.pl AACT AATC
+    $ perl 09-extra-credit.pl AACT AATC
     A A C T
     | | * *
     A A T C

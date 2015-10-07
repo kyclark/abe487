@@ -1,0 +1,31 @@
+1) What is the benefit of the pragma "use autodie"?
+
+You don't have to 'open ... or die "..."' as Perl will automatically 
+generate a useful error message and stop execution of the program.
+
+2) In Perl, there are three ways to print messages to STDERR (print STDERR, 
+   warn, die).  From the shell (bash), how does one redirect STDERR into 
+   a file?
+
+    program 1>out 2>err
+
+3) The old way to open files in Perl was to use just two arguments, the 
+   first of which is a global symbol 
+
+ open FILEHANDLE, '>myfile.txt';
+
+This is bad bad bad and none of my students would ever do this.  The proper way is to use the three-argument form with a scalar:
+
+ open my $filehandle, $mode, 'myfile.txt';
+
+Where you see $mode, tell me the three symbols I can use to indicate to Perl that I want to open for:
+
+- read
+- write
+- append
+
+Hint: They are exactly the same as the redirect flags in bash.
+
+  read   = <
+  write  = >
+  append = >>

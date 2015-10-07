@@ -1,0 +1,16 @@
+1) What command will remove a directory and all its contents?
+
+  rm -rf 
+
+2) If you execute "cd" with no arguments, in which directory will be placed?
+
+  $HOME 
+
+3) What command will count (just) lines of text?
+
+  wc -l
+
+4) What is the difference between sort's "-n" and "-g" options for 
+   numerical sorting?
+
+  Only -g will handle scientific notation (e.g., "3.14e-10").

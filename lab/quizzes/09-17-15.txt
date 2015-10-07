@@ -1,0 +1,39 @@
+1) What is the special variable that Perl uses to give you access to the
+   command line arguments?
+
+    @ARGV
+
+2) From inside a Perl program, how would you read a bit of text from the user?
+
+    my $answer = <STDIN>;
+
+3) How could you get a sorted list of the amino acids from this data structure?
+
+    my %aa = (
+       Alanine       => 'GCA, GCC, GCG, GCT',
+       Asparagine    => 'AAC, AAT, GAC, GAT',
+       Cysteine      => 'TGC, TGT',
+       Aspartic_acid => 'GAC, GAT',
+       Glutamic_acid => 'GAA, GAG',
+       Phenylalanine => 'TTC, TTT',
+       Glycine       => 'GGA, GGC, GGG, GGT',
+       Histidine     => 'CAC, CAT',
+       Isoleucine    => 'ATA, ATC, ATT',
+       Lysine        => 'AAA, AAG',
+       Leucine       => 'CTA, CTC, CTG, CTT, TTA, TTG',
+       Methionine    => 'ATG',
+       Asparagine    => 'AAC, AAT',
+       Proline       => 'CCA, CCC, CCG, CCT',
+       Glutamine     => 'CAA, CAG',
+       Arginine      => 'AGA, AGG, CGA, CGC, CGG, CGT',
+       Serine        => 'AGC, AGT, TCA, TCC, TCG, TCT',
+       Threonine     => 'ACA, ACC, ACG, ACT',
+       Valine        => 'GTA, GTC, GTG, GTT',
+       Tryptophan    => 'TGG',
+       X             => 'NNN',
+       Tyrosine      => 'TAC, TAT',
+       Glutamine     => 'CAA, CAG, GAA, GAG',
+       STOP          => 'TAA, TAG, TGA',
+    );
+
+    my @aa = sort keys %aa;

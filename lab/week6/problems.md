@@ -55,7 +55,7 @@ Expected output:
     $ perl 03-sort.pl 98 2 36 74 27 33
     default sort = 2, 27, 33, 36, 74, 98
     numerical sort = 2, 27, 33, 36, 74, 98
-    reverse numercial sort = 98, 74, 36, 33, 27, 2
+    reverse numerical sort = 98, 74, 36, 33, 27, 2
 
 ## 04-array-ops.pl
 

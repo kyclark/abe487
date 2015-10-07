@@ -2,7 +2,6 @@
 
 use strict;
 use FindBin '$Bin';
-use File::Spec::Functions qw(catfile abs2rel);
 use Test::Script::Run qw'is_script_output';
 use Test::More tests => 21;
 
@@ -168,15 +167,19 @@ my @tests = (
 );
 
 for my $test (@tests) {
-    my $path = abs2rel(catfile($Bin, '..', $test->{'script'}));
+    SKIP: {
+        my $path = $test->{'script'};
 
-    for my $cond (@{ $test->{'conditions'} }) {
-        is_script_output(
-            $test->{'script'}, 
-            $cond->{'args'}   // [], 
-            $cond->{'stdout'} // [],
-            $cond->{'stderr'} // [],
-            $cond->{'msg'},
-        );
+        skip "$path does not exist", 1 unless -e $path;
+
+        for my $cond (@{ $test->{'conditions'} }) {
+            is_script_output(
+                $path,
+                $cond->{'args'}   // [], 
+                $cond->{'stdout'} // [],
+                $cond->{'stderr'} // [],
+                $cond->{'msg'},
+            );
+        }
     }
 }

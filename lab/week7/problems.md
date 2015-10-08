@@ -68,13 +68,13 @@ Take a command-line argument of a FASTA file, default to
 sequence ID for your key and the sequence for your value.  Report the
 names of the sequences and their lengths sorted by sequence length.
 
-    [catalina@~/work/abe487/lab/week7]$ perl 05-file-to-hash.pl
+    [catalina@~/work/abe487/lab/week7]$ perl 02-fasta-hash.pl
     Bden|BDEG_00353: 194
     Bden|BDEG_03796: 301
     Bden|BDEG_00317: 371
     Bden|BDEG_06990: 376
     Bden|BDEG_02250: 408
-    [catalina@~/work/abe487/lab/week7]$ perl 05-file-to-hash.pl test.fa
+    [catalina@~/work/abe487/lab/week7]$ perl 02-fasta-hash.pl test.fa
     bar: 50
     baz: 102
     foo: 102
@@ -137,24 +137,24 @@ NB: The number of possible kmers is (n - k + 1) where
 
 Expected output:
 
-    $ perl 02-kmer-count.pl
+    $ perl 04-kmer-count.pl
     Please provide a sequence.
 
     $ touch empty
     $ perl 02-kmer-count.pl empty
     Zero-length sequence.
 
-    $ perl 02-kmer-count.pl A
+    $ perl 04-kmer-count.pl A
     Cannot get any 3 mers from a sequence of length 1
 
-    $ perl 02-kmer-count.pl AAA
+    $ perl 04-kmer-count.pl AAA
     Sequence length          3
     Mer size                 3
     Number of kmers          1
     Unique kmers             1
     Num. singletons          1
 
-    $ perl 02-kmer-count.pl TTTGATACTCCTATTAAGTAA 2
+    $ perl 04-kmer-count.pl TTTGATACTCCTATTAAGTAA 2
     Sequence length         21
     Mer size                 2
     Number of kmers         20
@@ -167,7 +167,7 @@ Expected output:
     CT: 2
     AA: 2
 
-    $ perl 02-kmer-count.pl mouse.fa 8
+    $ perl 04-kmer-count.pl mouse.fa 8
     Sequence length      42162
     Mer size                 8
     Number of kmers      42155

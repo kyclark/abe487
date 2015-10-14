@@ -10,11 +10,10 @@ def main(args=None):
 
     (file1, file2) = args
 
-    nonword = re.compile('\W')
     words1 = get_words(file1)
     words2 = get_words(file2)
-
     common = sorted(words1.intersection(words2))
+
     print("\n".join(common))
     print("Found %s words in common." % len(common))
 

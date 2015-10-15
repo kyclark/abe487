@@ -1,111 +1,119 @@
-# Perl VI Problem Set
+# Perl Week 8 Problem Set
+
+Create a directory named "week8" for these scripts.
 
 ## 01-palindrome.pl
 
-Write a program named "pali.pl" to detect palindromes. It must be able
+Write a program to detect palindromes. It must be able
 to handle changes in case.
- 
-    # 01-palindrome.pl "Madam in Eden Im Adam"
- 
-yes!
- 
-% pali.pl gatcctag
- 
-yes!
- 
-% pali.pl "cold spring harbor laboratory"
- 
-                  no!
- 
-## 02-palindrome.pl
 
-Modify the program to work even if there is extraneous punctuation  (Hint:s///):
+    $ perl 01-palindrome.pl
+    Please provide a word or phrase. 
+    $ perl 01-palindrome.pl foo
+    No
+    $ perl 01-palindrome.pl "Madam in Eden Im Adam"
+    Yes
+    $ perl 01-palindrome.pl gatcctag
+    Yes
+    $ perl 01-palindrome.pl "A man, a plan, a canal... Panama"
+    Yes
  
- % pali.pl "A man, a plan, a canal... Panama"
- 
-  yes!
- 
-## 03-sub.pl
+## 02-nobody.pl
 
-In the Nobody.txt file substitute every occurrence of 'Nobody' with
-a name given on the command line (default to "George").
+At the bottom of your script, put "__DATA__" and then insert the
+contents of the "nobody.txt" file.  Read from the special "DATA"
+filehandle (a global symbol) as you would from a normal filehandle,
+but you do not have to "open" it first.  (Handy!) Substitute every
+occurrence of "Nobody" with a name given on the command line (default
+to "George").
 
-## 04-fasta.pl
+E.g., your script will look like this:
+
+    #!/usr/bin/env perl
+
+    use strict;
+    use warnings;
+
+    while (my $line = <DATA>) {
+        # ...
+    }
+
+    __DATA__
+    Nobody by Shel Silverstein
+    ...
+    
+Expected output:
+
+    [catalina@~/work/abe487/lab/week8]$ perl 02-nobody.pl
+    George by Shel Silverstein
+
+    George loves me,
+    [output elided]
+
+    [catalina@~/work/abe487/lab/week8]$ perl 02-nobody.pl Harry
+    Harry by Shel Silverstein
+
+    Harry loves me,
+    [output elided]
+
+## 03-fasta.pl
 
 Find all the lines in a FASTA file that are the header (>seqName desc)
-using pattern matching.
+using pattern matching.  Print out a count and the header (less the
+">") use the printf template "%6d: %s\n".  At the end, print a summary 
+of how many were found.
 
-## 05-fasta-desc.pl
+    $ perl 03-fasta.pl
+    Please provide a FASTA file.
+    $ perl 03-fasta.pl one.fa
+         1: foo
+    Found 1 sequence.
+    $ perl 03-fasta.pl test.fa
+         1: foo
+         2: bar
+         3: baz
+    Found 3 sequences.
 
-If a line matches the format of a FASTA header, extract the sequence
-name and description using sub patterns as well as $1 and $2. 
+## 04-restriction.pl
 
-    - Print id:"extracted seq name" desc:"extracted description"
+The enzyme ApoI has a restriction site: R^AATTY where R and Y are
+degenerate nucleotideides. See the IUPAC table
+(http://www.bioinformatics.org/sms/iupac.html) to identify the
+nucleotide possibilities for the R and Y.
 
-## 06-fasta-hash.pl
+Write a regular expression that will match occurrences of this site 
 
-Create or modify your FASTA parser to use regular expressions. Also
-make sure your parser can deal with a sequence that is split over many
-lines.
+    $ cat seq.txt
+    GAATTCAAGTTCTTGTGCGCACACAAATCCAATAAAAACTATTGTGCACACAGACGCGAC
+    TTCGCGGTCTCGCTTGTTCTTGTTGTATTCGTATTTTCATTTCTCGTTCTGTTTCTACTT
+    AACAATGTGGTGATAATATAAAAAATAAAGCAATTCAAAAGTGTATGACTTAATTAATGA
+    GCGATTTTTTTTTTGAAATCAAATTTTTGGAACATTTTTTTTAAATTCAAATTTTGGCGA
+    AAATTCAATATCGGTTCTACTATCCATAATATAATTCATCAGGAATACATCTTCAAAGGC
+    AAACGGTGACAACAAAATTCAGGCAATTCAGGCAAATACCGAATGACCAGCTTGGTTATC
+    AATTCTAGAATTTGTTTTTTGGTTTTTATTTATCATTGTAAATAAGACAAACATTTGTTC
+    CTAGTAAAGAATGTAACACCAGAAGTCACGTAAAATGGTGTCCCCATTGTTTAAACGGTT
+    GTTGGGACCAATGGAGTTCGTGGTAACAGTACATCTTTCCCCTTGAATTTGCCATTCAAA
+    ATTTGCGGTGGAATACCTAACAAATCCAGTGAATTTAAGAATTGCGATGGGTAATTGACA
+    TGAATTCCAAGGTCAAATGCTAAGAGATAGTTTAATTTATGTTTGAGACAATCAATTCCC
+    CAATTTTTCTAAGACTTCAATCAATCTCTTAGAATCCGCCTCTGGAGGTGCACTCAGCCG
+    CACGTCGGGCTCACCAAATATGTTGGGGTTGTCGGTGAACTCGAATAGAAATTATTGTCG
+    CCTCCATCTTCATGGCCGTGAAATCGGCTCGCTGACGGGCTTCTCGCGCTGGATTTTTTC
+    ACTATTTTTGAATACATCATTAACGCAATATATATATATATATATTTAT
+    $ perl 04-restriction.pl
+    Please provide a sequence or file.
+    $ perl 04-restriction.pl seq.txt
+    G^AATTCAAGTTCTTGTGCGCACACAAATCCAATAAAAACTATTGTGCACACAGACGCGACTTCGCGGTCTCGCTTGTTCTTGTTGTATTCGTATTTTCATTTCTCGTTCTGTTTCTACTTAACAATGTGGTGATAATATAAAAAATAAAGCAATTCAAAAGTGTATGACTTAATTAATGAGCGATTTTTTTTTTGAAATCA^AATTTTTGGAACATTTTTTTTA^AATTCA^AATTTTGGCGAA^AATTCAATATCGGTTCTACTATCCATAATATAATTCATCAGGAATACATCTTCAAAGGCAAACGGTGACAACAA^AATTCAGGCAATTCAGGCAAATACCGAATGACCAGCTTGGTTATCAATTCTAG^AATTTGTTTTTTGGTTTTTATTTATCATTGTAAATAAGACAAACATTTGTTCCTAGTAAAGAATGTAACACCAGAAGTCACGTAAAATGGTGTCCCCATTGTTTAAACGGTTGTTGGGACCAATGGAGTTCGTGGTAACAGTACATCTTTCCCCTTG^AATTTGCCATTCAA^AATTTGCGGTGGAATACCTAACAAATCCAGTG^AATTTAAGAATTGCGATGGGTAATTGACATG^AATTCCAAGGTCAAATGCTAAGAGATAGTTTAATTTATGTTTGAGACAATCAATTCCCCAATTTTTCTAAGACTTCAATCAATCTCTTAGAATCCGCCTCTGGAGGTGCACTCAGCCGCACGTCGGGCTCACCAAATATGTTGGGGTTGTCGGTGAACTCGAATAGAAATTATTGTCGCCTCCATCTTCATGGCCGTGAAATCGGCTCGCTGACGGGCTTCTCGCGCTGGATTTTTTCACTATTTTTGAATACATCATTAACGCAATATATATATATATATATTTAT
 
-## 07-
+## 05-sort-frags.pl
 
-The enzyme ApoI has a restriction site: R^AATTY where R and Y are degenerate
-nucleotideides. See the IUPAC table to identify the nucleotide possibilities
-for the R and Y.
+Write a Perl script that uses <> to read STDIN such that you can pipe 
+the output of the previous program into it and then sort the cut
+fragments by length (in the same order they would separate on an 
+electrophoresis gel).
 
-Write a regular expression that will match occurrences of the site in
-a sequence. (hint: what are you going to do about the actual cut site,
-represented by the '^'?)
-
-## 08-restriction.pl
-
-Use the regular expression you just wrote to find all the restriction
-sites in the following sequence. Be sure to think about how to handle
-the newlines!
-
-GAATTCAAGTTCTTGTGCGCACACAAATCCAATAAAAACTATTGTGCACACAGACGCGAC
-TTCGCGGTCTCGCTTGTTCTTGTTGTATTCGTATTTTCATTTCTCGTTCTGTTTCTACTT
-AACAATGTGGTGATAATATAAAAAATAAAGCAATTCAAAAGTGTATGACTTAATTAATGA
-GCGATTTTTTTTTTGAAATCAAATTTTTGGAACATTTTTTTTAAATTCAAATTTTGGCGA
-AAATTCAATATCGGTTCTACTATCCATAATATAATTCATCAGGAATACATCTTCAAAGGC
-AAACGGTGACAACAAAATTCAGGCAATTCAGGCAAATACCGAATGACCAGCTTGGTTATC
-AATTCTAGAATTTGTTTTTTGGTTTTTATTTATCATTGTAAATAAGACAAACATTTGTTC
-CTAGTAAAGAATGTAACACCAGAAGTCACGTAAAATGGTGTCCCCATTGTTTAAACGGTT
-GTTGGGACCAATGGAGTTCGTGGTAACAGTACATCTTTCCCCTTGAATTTGCCATTCAAA
-ATTTGCGGTGGAATACCTAACAAATCCAGTGAATTTAAGAATTGCGATGGGTAATTGACA
-TGAATTCCAAGGTCAAATGCTAAGAGATAGTTTAATTTATGTTTGAGACAATCAATTCCC
-CAATTTTTCTAAGACTTCAATCAATCTCTTAGAATCCGCCTCTGGAGGTGCACTCAGCCG
-CACGTCGGGCTCACCAAATATGTTGGGGTTGTCGGTGAACTCGAATAGAAATTATTGTCG
-CCTCCATCTTCATGGCCGTGAAATCGGCTCGCTGACGGGCTTCTCGCGCTGGATTTTTTC
-ACTATTTTTGAATACATCATTAACGCAATATATATATATATATATTTAT
-
-## 09-cut-sites.pl
-
-Determine the site(s) of the cut in the above sequence. Print out
-the sequence with "^" at the cut site.
-
-Hints:
-Use subpatterns (parentheses and $1, $2) to find the cut site within
-the pattern.
-
-    Use s///
-
-Example: if the pattern is GACGT^CT the following sequence
-
-    AAAAAAAAGACGTCTTTTTTTAAAAAAAAGACGTCTTTTTTT
-
-would be cut like this:
-
-    AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
-
-## 10-frag-length.pl
-
-Now that you've done your restriction digest, determine the lengths of
-your fragments and sort them by length (in the same order they would
-separate on an electrophoresis gel).
-
-Hint: take a look at the split man page or think about storing your matches in an array. With one of these two approaches you should be able to convert this string:
+Hint: take a look at the split man page or think about storing your
+matches in an array. With one of these two approaches you should be
+able to convert this string:
 
     AAAAAAAAGACGT^CTTTTTTTAAAAAAAAGACGT^CTTTTTTT
 
@@ -113,20 +121,36 @@ into this array:
 
     ("AAAAAAAAGACGT","CTTTTTTTAAAAAAAAGACGT","CTTTTTTT")
 
+    $ perl 04-restriction.pl seq.txt | ./05-sort-frags.pl
+    G
+    AATTCA
+    AATTTTGGCGAA
+    AATTTGCCATTCAA
+    AATTTTTGGAACATTTTTTTTA
+    AATTTAAGAATTGCGATGGGTAATTGACATG
+    AATTTGCGGTGGAATACCTAACAAATCCAGTG
+    AATTCAGGCAATTCAGGCAAATACCGAATGACCAGCTTGGTTATCAATTCTAG
+    AATTCAATATCGGTTCTACTATCCATAATATAATTCATCAGGAATACATCTTCAAAGGCAAACGGTGACAACAA
+    AATTTGTTTTTTGGTTTTTATTTATCATTGTAAATAAGACAAACATTTGTTCCTAGTAAAGAATGTAACACCAGAAGTCACGTAAAATGGTGTCCCCATTGTTTAAACGGTTGTTGGGACCAATGGAGTTCGTGGTAACAGTACATCTTTCCCCTTG
+    AATTCAAGTTCTTGTGCGCACACAAATCCAATAAAAACTATTGTGCACACAGACGCGACTTCGCGGTCTCGCTTGTTCTTGTTGTATTCGTATTTTCATTTCTCGTTCTGTTTCTACTTAACAATGTGGTGATAATATAAAAAATAAAGCAATTCAAAAGTGTATGACTTAATTAATGAGCGATTTTTTTTTTGAAATCA
+    AATTCCAAGGTCAAATGCTAAGAGATAGTTTAATTTATGTTTGAGACAATCAATTCCCCAATTTTTCTAAGACTTCAATCAATCTCTTAGAATCCGCCTCTGGAGGTGCACTCAGCCGCACGTCGGGCTCACCAAATATGTTGGGGTTGTCGGTGAACTCGAATAGAAATTATTGTCGCCTCCATCTTCATGGCCGTGAAATCGGCTCGCTGACGGGCTTCTCGCGCTGGATTTTTTCACTATTTTTGAATACATCATTAACGCAATATATATATATATATATTTAT
 
-# EXTRA CREDIT
+# extra-credit.pl
 
-(Choose one)
+Download "The Restriction Enzyme Database" from 
+http://rebase.neb.com/rebase/link_bionet. Parse the data fill a hash of enzymes and their patterns.
+Print the hash to STDERR with Data::Dumper, and report the number of enzymes to STDOUT.
 
-## ec-1.pl
-
-Use the data file from rebase.neb.com
-(http://rebase.neb.com/rebase/link_bionet) to fill a hash of enzymes,
-their recognition patterns 
-
-## ec-2.l
-
-Ask a user for the designed enzyme, then cut their supplied sequence,
-returning the number of fragments, the fragments in their natural
-order (unsorted), and finally sorted from biggest to smallest
-fragment.
+    $ perl extra-credit.pl 2>err
+    There are 3718 enzymes.
+    $ head err
+    $VAR1 = {
+              'Acs1421I (SalI)' => 'GTCGAC',
+              'BstTS5I (BbvII)' => 'GAAGACNN^',
+              'Bce170I (PstI)' => 'CTGCAG',
+              'Uba1323I (MboI)' => 'GATC',
+              'Ecl136II (SacI)' => 'GAG^CTC',
+              'Eco26I (HgiJII)' => 'GRGCYC',
+              'PaeHI (HgiJII)' => 'GRGCY^C',
+              'Tsp301I (AvaII)' => 'GGWCC',
+              'DsaI' => 'C^CRYGG',

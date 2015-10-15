@@ -1,0 +1,22 @@
+Given this:
+
+ my %fruit = (
+   apple   => 'red',
+   orange  => 'orange',
+   banana  => 'yellow',
+   grape   => 'green',
+ );
+
+1) How would one get the color of "banana"?
+
+my $color = $fruit{'banana'}
+
+2) How would one generate this string from the hash?
+
+  green, orange, red, yellow
+
+join ', ', sort values %fruit;
+
+3) How would one add "peach => pink" to the hash?
+
+$fruit{'peach'} = 'pink';

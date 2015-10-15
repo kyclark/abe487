@@ -40,20 +40,21 @@ E.g., your script will look like this:
 
     __DATA__
     Nobody by Shel Silverstein
-    ...
-    
+    Nobody loves me,
+    Nobody cares,
+
 Expected output:
 
     [catalina@~/work/abe487/lab/week8]$ perl 02-nobody.pl
     George by Shel Silverstein
-
     George loves me,
+    George cares,
     [output elided]
 
     [catalina@~/work/abe487/lab/week8]$ perl 02-nobody.pl Harry
     Harry by Shel Silverstein
-
     Harry loves me,
+    Harry cares,
     [output elided]
 
 ## 03-fasta.pl
@@ -154,3 +155,34 @@ Print the hash to STDERR with Data::Dumper, and report the number of enzymes to 
               'PaeHI (HgiJII)' => 'GRGCY^C',
               'Tsp301I (AvaII)' => 'GGWCC',
               'DsaI' => 'C^CRYGG',
+
+# Testing
+
+To test, clone Ken's Github (not into your own Git checkout, though):
+
+    $ git clone git@github.com:kyclark/abe487.git kyclark
+
+Go into the "lab/tester" directory and run with the "week8.conf" and your 
+"week8" directory.  If you run this locally, you will need to install 
+the CPAN module "Test::Script::Run":
+
+    $ sudo cpan -i Test::Script::Run
+
+Test output should look like this:
+
+$ ./tester.pl -t week8.conf -d ../week8/
+ok 1 - 01-palindrome.pl
+ok 2 - 01-palindrome.pl foo
+ok 3 - 01-palindrome.pl "Madam in Eden Im Adam"
+ok 4 - 01-palindrome.pl gatcctag
+ok 5 - 01-palindrome.pl "A man, a plan, a canal... Panama"
+ok 6 - 02-nobody.pl John
+ok 7 - 03-fasta.pl
+ok 8 - 03-fasta.pl one.fa
+ok 9 - 03-fasta.pl test.fa
+ok 10 - 04-restriction.pl
+ok 11 - 04-restriction.pl seq.txt
+ok 12 - 05-sort-frags.pl restrictions.txt
+1..12
+The plan was already output at /usr/local/lib/perl5/5.22.0/Test/Builder.pm line 2510.
+1..12

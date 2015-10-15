@@ -104,7 +104,6 @@ sub test {
         my $path = $test->{'script'};
         my $args = [];
         if ($test->{'args'}) {
-            $test->{'args'} =~ s/^"|"$//g;
             $args = [ split(/\s+/, $test->{'args'}) ];
         }
 

@@ -67,12 +67,12 @@ of how many were found.
     $ perl 03-fasta.pl
     Please provide a FASTA file.
     $ perl 03-fasta.pl one.fa
-         1: foo
+    1: foo
     Found 1 sequence.
     $ perl 03-fasta.pl test.fa
-         1: foo
-         2: bar
-         3: baz
+    1: foo
+    2: bar
+    3: baz
     Found 3 sequences.
 
 ## 04-restriction.pl

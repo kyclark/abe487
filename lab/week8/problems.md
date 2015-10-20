@@ -61,8 +61,7 @@ Expected output:
 
 Find all the lines in a FASTA file that are the header (>seqName desc)
 using pattern matching.  Print out a count and the header (less the
-">") use the printf template "%6d: %s\n".  At the end, print a summary 
-of how many were found.
+">").  At the end, print a summary of how many were found.
 
     $ perl 03-fasta.pl
     Please provide a FASTA file.

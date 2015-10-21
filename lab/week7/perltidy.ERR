@@ -1,0 +1,4 @@
+
+1: last if ++$i  10;
+             --  ^  
+found Number where operator expected (previous token underlined)

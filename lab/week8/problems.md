@@ -5,7 +5,11 @@ Create a directory named "week8" for these scripts.
 ## 01-palindrome.pl
 
 Write a program to detect palindromes. It must be able
-to handle changes in case.
+to handle changes in case.  
+
+Hint: Use the substitute command (s//) with a regular expression
+to get rid of everything but [A-Za-z0-9], then see if the string
+is the same forward and reverse.
 
     $ perl 01-palindrome.pl
     Please provide a word or phrase. 

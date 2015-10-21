@@ -52,7 +52,7 @@ if you see an error like "Can't locate autodie.pm in @INC," then do:
     $ cpanm autodie
 
 Create a directory called "week9," and use the "new-pl" script to 
-create all the following scripts, e.g.:
+create all the following script, e.g.:
 
     new-pl 01-subs.pl "subroutine practice"
 
@@ -75,6 +75,20 @@ to print and the second is the argument to act upon.
           --argument  The argument to the thing
           --help      Show brief help and exit
           --man       Show full documentation
+    
+    $ ./01-subs.pl -h
+    Usage:
+          01-subs.pl -p hello -a Tucson
+
+          01-subs.pl -p rc -a GAGAGAGAGAGTTTTTTTTT
+
+        Options:
+
+          --program   The thing to do
+          --argument  The argument to the thing
+          --help      Show brief help and exit
+          --man       Show full documentation
+
     
     $ ./01-subs.pl -p hello
     Missing argument
@@ -104,6 +118,39 @@ to print and the second is the argument to act upon.
           --help      Show brief help and exit
           --man       Show full documentation
 
+    $ perldoc 01-subs.pl
+    NAME
+        01-subs.pl - subroutine practice
+
+    SYNOPSIS
+          01-subs.pl -p hello -a Tucson
+
+          01-subs.pl -p rc -a GAGAGAGAGAGTTTTTTTTT
+
+        Options:
+
+          --program   The thing to do
+          --argument  The argument to the thing
+          --help      Show brief help and exit
+          --man       Show full documentation
+
+    DESCRIPTION
+        Either print "hello <something>" or the reverse-complement of something.
+
+    SEE ALSO
+        perl.
+
+    AUTHOR
+        Ken Youens-Clark <kyclark@email.arizona.edu>.
+
+    COPYRIGHT
+        Copyright (c) 2015 kyclark
+
+        This module is free software; you can redistribute it and/or modify it
+        under the terms of the GPL (either version 1, or at your option, any later
+        version) or the Artistic License 2.0. Refer to LICENSE for the full
+        license text and to DISCLAIMER for additional warranty disclaimers.
+    
     $ ./01-subs.pl -p hello -a Tucson
     Hello, Tucson
 

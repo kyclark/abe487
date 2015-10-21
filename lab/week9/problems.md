@@ -7,6 +7,7 @@ CPAN (http://cpan.org) modules simply by using the "cpan" or "cpanm"
 commands, e.g.:
 
     $ sudo cpan -i SQL::Translator
+    $ sudo cpanm DBI
 
 When you are on a machine where you do not have "sudo" privileges, 
 you will need to install CPAN modules into your $HOME directory.  This 
@@ -28,6 +29,10 @@ know to use the new "local::lib" for modules.  To do this, edit your
 
     export PATH=$PATH:~/perl5/bin
     eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib)
+
+Be sure to source it:
+
+    $ source ~/.bashrc
 
 Now put the "new-pl" script somewhere in your $PATH, e.g.:
 

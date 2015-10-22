@@ -46,6 +46,6 @@ if ($nsingle < $nkmers) {
     my $i = 0;
     for my $kmer (@common) {
         printf "%s: %s\n", $kmer, $freq{ $kmer };
-        last if ++$i > 10;
+        last if ++$i == 10;
     }
 }

@@ -3,13 +3,14 @@
 use strict;
 use warnings;
 use feature 'say';
+use lib '/rsgrps/bhurwitz/hurwitzlab/perl5/lib/perl5';
 use autodie;
 use Data::Dumper;
 use Getopt::Long;
 use File::Spec::Functions;
 use Pod::Usage;
-use Test::Script::Run qw'is_script_output';
 use Test::More 'no_plan';
+use Test::Script::Run qw'is_script_output';
 
 main();
 
@@ -103,7 +104,6 @@ sub test {
         my $path = $test->{'script'};
         my $args = [];
         if ($test->{'args'}) {
-            $test->{'args'} =~ s/^"|"$//g;
             $args = [ split(/\s+/, $test->{'args'}) ];
         }
 

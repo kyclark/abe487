@@ -139,14 +139,14 @@ tester.pl - a script
 
 Options:
 
-  --tests  Text file (YAML format) of tests
+  --tests  Text file of tests
   --dir    Directory containing Perl scripts to test
   --help   Show brief help and exit
   --man    Show full documentation
 
 =head1 DESCRIPTION
 
-Reads tests from a YAML file and applies them to the script in the 
+Reads tests from an input file and applies them to the script in the 
 input directory.
 
 =head1 SEE ALSO
@@ -159,7 +159,7 @@ Ken Youens-Clark E<lt>kyclark@email.arizona.eduE<gt>.
 
 =head1 COPYRIGHT
 
-Copyright (c) 2015 kyclark
+Copyright (c) 2015 Ken Youens-Clark
 
 This module is free software; you can redistribute it and/or
 modify it under the terms of the GPL (either version 1, or at

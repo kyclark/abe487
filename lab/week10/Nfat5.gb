@@ -1,0 +1,351 @@
+LOCUS       NM_001286260            4725 bp    mRNA    linear   ROD 15-FEB-2015
+DEFINITION  Mus musculus nuclear factor of activated T cells 5 (Nfat5),
+            transcript variant c, mRNA.
+ACCESSION   NM_001286260
+VERSION     NM_001286260.1  GI:555943849
+KEYWORDS    RefSeq.
+SOURCE      Mus musculus (house mouse)
+  ORGANISM  Mus musculus
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Glires; Rodentia;
+            Sciurognathi; Muroidea; Muridae; Murinae; Mus; Mus.
+REFERENCE   1  (bases 1 to 4725)
+  AUTHORS   Hao S, Bellner L, Zhao H, Ratliff BB, Darzynkiewicz Z, Vio CP and
+            Ferreri NR.
+  TITLE     NFAT5 is protective against ischemic acute kidney injury
+  JOURNAL   Hypertension 63 (3), E46-E52 (2014)
+   PUBMED   24379188
+  REMARK    GeneRIF: NFAT5 is part of a protective mechanism that limits renal
+            damage induced by IRI.
+REFERENCE   2  (bases 1 to 4725)
+  AUTHORS   Luo Y, Liu Y, Liu M, Wei J, Zhang Y, Hou J, Huang W, Wang T, Li X,
+            He Y, Ding F, Yuan L, Cai J, Zheng F and Yang JY.
+  TITLE     Sfmbt2 10th intron-hosted miR-466(a/e)-3p are important epigenetic
+            regulators of Nfat5 signaling, osmoregulation and urine
+            concentration in mice
+  JOURNAL   Biochim. Biophys. Acta 1839 (2), 97-106 (2014)
+   PUBMED   24389345
+  REMARK    GeneRIF: Data indicate that in transgenic mice overexpressing
+            Sfmbt2 10th intron-hosted miR-466a-3p, significant down-regulation
+            of Nfat5 and many other osmoregulation-related genes was observed
+            in both the renal cortex and medulla.
+REFERENCE   3  (bases 1 to 4725)
+  AUTHORS   Berga-Bolanos R, Alberdi M, Buxade M, Aramburu J and
+            Lopez-Rodriguez C.
+  TITLE     NFAT5 induction by the pre-T-cell receptor serves as a selective
+            survival signal in T-lymphocyte development
+  JOURNAL   Proc. Natl. Acad. Sci. U.S.A. 110 (40), 16091-16096 (2013)
+   PUBMED   24043824
+  REMARK    GeneRIF: NFAT5 induction by the pre-T-cell receptor serves as a
+            selective survival signal in T-lymphocyte development.
+REFERENCE   4  (bases 1 to 4725)
+  AUTHORS   Wiig H, Schroder A, Neuhofer W, Jantsch J, Kopp C, Karlsen TV,
+            Boschmann M, Goss J, Bry M, Rakova N, Dahlmann A, Brenner S,
+            Tenstad O, Nurmi H, Mervaala E, Wagner H, Beck FX, Muller DN,
+            Kerjaschki D, Luft FC, Harrison DG, Alitalo K and Titze J.
+  TITLE     Immune cells control skin lymphatic electrolyte homeostasis and
+            blood pressure
+  JOURNAL   J. Clin. Invest. 123 (7), 2803-2815 (2013)
+   PUBMED   23722907
+REFERENCE   5  (bases 1 to 4725)
+  AUTHORS   Kim NH, Hong BK, Choi SY, Moo Kwon H, Cho CS, Yi EC and Kim WU.
+  TITLE     Reactive oxygen species regulate context-dependent inhibition of
+            NFAT5 target genes
+  JOURNAL   Exp. Mol. Med. 45, E32 (2013)
+   PUBMED   23867654
+  REMARK    GeneRIF: A novel context-dependent suppression of NFAT5 target gene
+            expression in RAW 264.7 macrophages stimulated with
+            lipopolysaccharide (LPS) or a high salt (NaCl) concentration, was
+            identified.
+            Publication Status: Online-Only
+REFERENCE   6  (bases 1 to 4725)
+  AUTHORS   Stroud JC, Lopez-Rodriguez C, Rao A and Chen L.
+  TITLE     Structure of a TonEBP-DNA complex reveals DNA encircled by a
+            transcription factor
+  JOURNAL   Nat. Struct. Biol. 9 (2), 90-94 (2002)
+   PUBMED   11780147
+  REMARK    GeneRIF: Structure of the NFAT5/TonEBP DNA binding domain bound to
+            a TonE DNA element. The structure shows DNA encirclement by two
+            dimerization interfaces: (1) at the TIG domain similar to NF-kappaB
+            family members, and (2) at the DNA recognition domain.
+REFERENCE   7  (bases 1 to 4725)
+  AUTHORS   Tian W and Cohen DM.
+  TITLE     Urea inhibits hypertonicity-inducible TonEBP expression and action
+  JOURNAL   Am. J. Physiol. Renal Physiol. 280 (5), F904-F912 (2001)
+   PUBMED   11292634
+REFERENCE   8  (bases 1 to 4725)
+  AUTHORS   Pan S, Tsuruta R, Masuda ES, Imamura R, Bazan F, Arai K, Arai N and
+            Miyatake S.
+  TITLE     NFATz: a novel rel similarity domain containing protein
+  JOURNAL   Biochem. Biophys. Res. Commun. 272 (3), 765-776 (2000)
+   PUBMED   10860829
+REFERENCE   9  (bases 1 to 4725)
+  AUTHORS   Hebinck A, Dalski A, Engel H, Mattei M, Hawken R, Schwinger E and
+            Zuhlke C.
+  TITLE     Assignment of transcription factor NFAT5 to human chromosome
+            16q22.1, murine chromosome 8D and porcine chromosome 6p1.4 and
+            comparison of the polyglutamine domains
+  JOURNAL   Cytogenet. Cell Genet. 90 (1-2), 68-70 (2000)
+   PUBMED   11060450
+REFERENCE   10 (bases 1 to 4725)
+  AUTHORS   Lopez-Rodriguez C, Aramburu J, Rakeman AS, Copeland NG, Gilbert DJ,
+            Thomas S, Disteche C, Jenkins NA and Rao A.
+  TITLE     NF-AT5: the NF-AT family of transcription factors expands in a new
+            direction
+  JOURNAL   Cold Spring Harb. Symp. Quant. Biol. 64, 517-526 (1999)
+   PUBMED   11233530
+  REMARK    Review article
+COMMENT     VALIDATED REFSEQ: This record has undergone validation or
+            preliminary review. The reference sequence was derived from
+            AK134022.1, AK052632.1, AC158364.4 and BE633760.1.
+            
+            Transcript Variant: This variant (c) uses an alternate splice site
+            and lacks a portion of the 3' coding region, compared to variant b.
+            This results in a shorter protein (isoform c) with a distinct
+            C-terminus, compared to variant b.
+            
+            Sequence Note: This RefSeq record was created from transcript and
+            genomic sequence data to make the sequence consistent with the
+            reference genome assembly. The genomic coordinates used for the
+            transcript record were based on transcript alignments.
+            
+            Publication Note:  This RefSeq record includes a subset of the
+            publications that are available for this gene. Please see the Gene
+            record to access additional publications.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: AF162853.1 [ECO:0000332]
+            RNAseq introns              :: mixed/partial sample support
+                                           SAMN00849375, SAMN00849379
+                                           [ECO:0000350]
+            ##Evidence-Data-END##
+            COMPLETENESS: complete on the 3' end.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-149               AK134022.1         2-150
+            150-555             AK052632.1         112-517
+            556-1992            AK134022.1         676-2112
+            1993-2073           AC158364.4         141293-141373
+            2074-2222           AC158364.4         145728-145876
+            2223-3992           AC158364.4         146598-148367
+            3993-4495           AC158364.4         158342-158844
+            4496-4725           BE633760.1         1-230
+FEATURES             Location/Qualifiers
+     source          1..4725
+                     /organism="Mus musculus"
+                     /mol_type="mRNA"
+                     /strain="C57BL/6"
+                     /db_xref="taxon:10090"
+                     /chromosome="8"
+                     /map="8 53.93 cM"
+     gene            1..4725
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /note="nuclear factor of activated T cells 5"
+                     /db_xref="GeneID:54446"
+                     /db_xref="MGI:MGI:1859333"
+     exon            1..429
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     CDS             357..4034
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /note="isoform c is encoded by transcript variant c;
+                     tonicity-responsive enhancer binding protein; T-cell
+                     transcription factor NFAT5; rel domain-containing
+                     transcription factor NFAT5; nuclear factor of activated
+                     T-cells 5"
+                     /codon_start=1
+                     /product="nuclear factor of activated T-cells 5 isoform c"
+                     /protein_id="NP_001273189.1"
+                     /db_xref="GI:555943850"
+                     /db_xref="CCDS:CCDS72168.1"
+                     /db_xref="GeneID:54446"
+                     /db_xref="MGI:MGI:1859333"
+                     /translation="MPSDFISLLSADLDLESPKSLYSRESVYDLLPKELQLPPPRETS
+                     VASMSQTSGGEAGSPPPAVVAADASSAPSSSSMGGACSSFTTSSSPTIYSTSVTDSKA
+                     MQVESCSSAVGVSNRGVSEKQLTGNTVQQHPSTPKRHTVLYISPPPEDLLDNSRMSCQ
+                     DEGCGLESEQSCSMWMEDSPSNFSNMSTSSYNDNTEVPRKSRKRNPKQRPGVKRRDCE
+                     ESNMDIFDADSAKAPHYVLSQLTTDNKGNSKAGNGTLDSQKGTGVKKSPMLCGQYPVK
+                     SEGKELKIVVQPETQHRARYLTEGSRGSVKDRTQQGFPTVKLEGHNEPVVLQVFVGND
+                     SGRVKPHGFYQACRVTGRNTTPCKEVDIEGTTVIEVGLDPSNNMTLAVDCVGILKLRN
+                     ADVEARIGIAGSKKKSTRARLVFRVNITRKDGSTLTLQTPSSPILCTQPAGVPEILKK
+                     SLHSCSVKGEEEVFLIGKNFLKGTKVIFQENVSDENSWKSEAEIDMELFHQNHLIVKV
+                     PPYHDQHITLPVSVGIYVVTNAGRSHDVQPFTYTPDPAAGALNVNVKKEISSPARPCS
+                     FEEAMKAMKTTGCNVDKVTILPNALITPLISSSMIKTEDVTPMEVTSEKRSSPIFQTT
+                     KSIGSTQQTLETISNIAGGAPFSSPSSSSHLTPESENQQQLQPKAYNPETLTTIQTQD
+                     ISQPGTFPAVSAASQLPSSDALLQQATQFQTREAQSRDTIQSDTVVNLSQLTEASQQQ
+                     QSPLQEQAQTLQQQIPSNIFPSPSSVSQLQSTIQQLQAGSFTGSAAGGRSGSVDLVQQ
+                     VLEAQQQLSSVLFSTPDGNENVQEQLNADIFQVSQIQNSVSPGMFSSAESAVHTRPDN
+                     LLPGRADSVHQQTENTLSNQQQQQQQQQQVMESSAAMVMEMQQSICQAAAQIQSELFP
+                     SAASASGSLQQSPVYQQPSHMMSALPTNEDMQMQCELFSSPPAASGNETSTTTTPQVA
+                     TPGSTMFQTPSSGDGEETGAQAKQIQNSVFQTMVQMQRSGDSQPQVNLFSSTKNIMSV
+                     QNNGTQQQGNSLFQQGSEMMSLQSGNFLQQSSHSQAQLFHPQNPIADAQNLSQETQGS
+                     IFHSPNPIVHSQTSTASSEQLQPSMFHSQNTIAVLQGSSVPQDQQSPNIFLSQSSINN
+                     LQTNTVAQEEQISFFAAQNSISPLQSTSNTEQQAAFQQQPPISHIQTPILSQEQAQPS
+                     QQGLFQPQESLHSHITPDACK"
+     misc_feature    720..722
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="N6-acetyllysine; propagated from
+                     UniProtKB/Swiss-Prot (Q9WV30.2); acetylation site"
+     exon            430..555
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     exon            556..1114
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     exon            1115..1307
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     STS             1291..2249
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /standard_name="Nfat5"
+                     /db_xref="UniSTS:532283"
+     exon            1308..1498
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     exon            1499..1671
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     exon            1672..1806
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     exon            1807..1859
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     exon            1860..1992
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     exon            1993..2073
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     exon            2074..2222
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     exon            2223..3992
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     exon            3993..4717
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /inference="alignment:Splign:1.39.8"
+     STS             4507..4659
+                     /gene="Nfat5"
+                     /gene_synonym="AI225870; B130038B15Rik; CAG-8; CAG80;
+                     mKIAA0827; NFATL1; nfatz; OREBP; TonEBP"
+                     /standard_name="UniSTS:224902"
+                     /db_xref="UniSTS:224902"
+ORIGIN      
+        1 agattcctgt cagcggcgcc ggcggtggcg gcggccgtca gtgtgcgctg aggagaagcc
+       61 cgaaacggac ccgtttggct ctccctcttc ccctttcccc ggtccgaagc ttctggtctc
+      121 tggactcacc gggagtcagt tctccactcc gcagagctgt tccctccact ccgccgccct
+      181 tctcatcgct cggccgggtg ggaagtgact gccctcgagg aggaggagga ggcagcggct
+      241 gccgccctcg cctcaccgcc cccggttcgg tgcccgcgga tcccggagag gaggtgccgc
+      301 cgccaccgcc gctccccccc tcccgctgcc ctcgggccgg gctgggtcga gctgcgatgc
+      361 cctcggactt catctcattg ctcagcgcgg acctagacct ggaatcgccc aagtccctgt
+      421 actcgcgaga atctgtctat gatcttctcc caaaggagtt acagttacct ccacctagag
+      481 aaacatctgt agcatcaatg agtcagacaa gcggtggtga ggcaggctcg cctcctccag
+      541 ctgtagttgc tgctgatgct tcttcagctc cctcctcttc ctccatgggc ggtgcttgca
+      601 gctcctttac cacctcttcc agccctacca tttattctac ctcagtcacc gacagcaagg
+      661 ctatgcaagt ggagagctgc tcctcagccg tgggggtaag taacagaggg gtaagtgaaa
+      721 agcagttaac cggtaacaca gttcagcagc atccatcaac cccgaagagg cacacagttt
+      781 tgtacatctc accaccacct gaggacttgc tggataacag tcggatgtcc tgccaggatg
+      841 aggggtgtgg attggaatct gagcagagct gcagtatgtg gatggaggat tccccctcca
+      901 acttcagtaa catgagcacc agttcctaca atgataacac tgaggtacct cgtaaatcac
+      961 gaaaacgaaa tccaaagcag aggccggggg tcaaacgacg agattgtgaa gaatctaata
+     1021 tggatatatt tgatgccgac agtgccaaag cacctcacta tgtgctttct cagcttacca
+     1081 cggacaacaa aggcaactca aaagctggaa atggaacatt ggacagccaa aagggaactg
+     1141 gagtaaagaa gagccctatg ttgtgcggac agtatccggt taaaagtgag gggaaggagc
+     1201 tgaagatagt ggtacagcct gaaacccaac accgagcccg gtacctgaca gagggcagcc
+     1261 gaggctctgt aaaagacaga acacagcaag gctttcctac ggtgaagctg gaaggccata
+     1321 atgaaccagt ggtgttgcag gtatttgtgg gcaatgattc tggtcgagta aaaccacatg
+     1381 gattctatca ggcctgtaga gtaactgggc gaaatacaac tccctgcaaa gaagtggaca
+     1441 ttgaaggtac cactgttata gaagttggtc ttgatcctag caacaacatg acactggcgg
+     1501 tggactgtgt tggaatattg aagctgagga atgccgatgt tgaagccaga attggaattg
+     1561 ctggatctaa gaaaaagagc actcgtgcca gattggtttt tcgagttaat atcacaagga
+     1621 aagatggctc tactctgaca ttgcagacac cttcttcccc cattttatgc actcagccag
+     1681 caggagttcc tgagatctta aagaaaagct tgcatagctg ttcagtgaaa ggagaggaag
+     1741 aagtattttt aattgggaaa aactttctga aaggaactaa agttattttc caggaaaatg
+     1801 tttctgatga aaactcttgg aaatcagaag ctgaaattga catggagtta ttccatcaga
+     1861 accatcttat tgtgaaggtt cctccgtatc atgaccaaca tataactttg cctgtatcag
+     1921 tgggaatata tgttgtgacc aatgctggaa gatctcatga tgttcagcca tttacgtaca
+     1981 ctccggatcc agcagctggt gctttgaatg taaatgtgaa aaaggagata tctagtccag
+     2041 caagaccttg ctcttttgaa gaagccatga aagcaatgaa aacgactgga tgtaacgtag
+     2101 ataaggtgac tatccttcct aatgccctga tcactccact catatcaagc agtatgatta
+     2161 agactgaaga tgttactcca atggaagtaa cttcagaaaa aagatcttcc ccaatttttc
+     2221 agactacaaa gagcattgga tcaacccagc aaaccttaga aactatttct aacatagcgg
+     2281 ggggtgcacc cttctcctca ccgtcgtcat cttcccactt aactcctgaa agtgagaatc
+     2341 agcagcagct tcagcccaag gcatacaacc cagagaccct gacaactatc cagacacagg
+     2401 acatctcaca gcccgggacc tttcccgcag tttctgctgc tagtcagctg cccagcagcg
+     2461 atgcactact gcagcaggca acacagtttc agacaagaga agctcagtcc agagacacaa
+     2521 tacagtcaga tacagtggtt aacttgtcac agttaactga agcatcacag cagcagcaat
+     2581 ccccactaca agaacaagca caaacgttac agcagcagat accatcaaat atttttccat
+     2641 cgccaagcag tgtcagccag ctccagagta ctattcagca gctgcaagca ggaagtttca
+     2701 caggcagcgc tgctggcggc aggagtggaa gcgttgattt ggtccagcag gttttagagg
+     2761 cacaacagca gttatcgtct gttctgtttt ctactccaga tgggaatgag aatgttcaag
+     2821 aacagcttaa tgcagacatt ttccaagtca gtcaaattca aaatagtgta agccctggaa
+     2881 tgttttcttc agcggagtct gcagttcaca ctagaccaga taacttacta cctgggaggg
+     2941 ctgacagcgt ccatcaacag actgaaaata cactgtctaa tcagcagcag cagcaacagc
+     3001 agcagcagca agtgatggag tcatcagctg caatggtgat ggagatgcag cagagcattt
+     3061 gccaagcagc tgcccagatc cagtcagagc tgtttccttc agctgcttca gcaagtggaa
+     3121 gccttcagca gtctccagtt taccagcagc cttctcacat gatgagtgca ctgcctacca
+     3181 acgaggacat gcagatgcag tgtgagctgt tctcgtctcc ccctgcagct tctggaaacg
+     3241 aaacttccac aaccaccacg ccacaggtgg caacccctgg ctccaccatg tttcagacac
+     3301 caagttcagg agatggagaa gaaactggag cacaagcaaa acagattcag aacagcgtct
+     3361 ttcagacaat ggtccaaatg cagcgcagtg gtgacagcca acctcaagta aacctctttt
+     3421 catctacaaa aaatataatg agtgttcaga ataatggtac ccagcaacaa gggaatagct
+     3481 tgttccagca agggagcgag atgatgtcac ttcagtctgg gaactttttg cagcagtcct
+     3541 ctcattcaca ggctcagctc tttcatcctc aaaatcctat tgctgatgct cagaaccttt
+     3601 cccaggaaac tcaaggttca atttttcata gtccaaatcc tattgtccac agtcaaactt
+     3661 ccacagcatc ctctgaacaa ctgcagcctt caatgtttca ctctcagaat accattgctg
+     3721 tgttacaggg ctcttcagtt cctcaagacc agcagtcacc caacatattt ctttcccaaa
+     3781 gttctatcaa taatcttcaa actaacacag tagcccaaga agagcagatt tcattttttg
+     3841 cagcacagaa ctcaatttct ccacttcagt caacatcaaa cactgagcag caagctgctt
+     3901 tccaacagca gcctccaatc tcacacatcc agacccctat tctttcccag gaacaggcac
+     3961 aaccctctca gcaagggtta tttcagcctc aggaaagctt acactcacac ataaccccag
+     4021 acgcttgcaa gtgagttgag aatcaaactt ctgtgacctg gctggagtta gagttcagcg
+     4081 acagagcctt tgtacacaca aggcccaagg taggtgtaat ccctggtacc aaagagagac
+     4141 agacagacag acagagctgt cctgtatcga agtgatcaca atttcactca ttagagacct
+     4201 tctgcagtgc aattgaacta accccttctc tctaatgaat gtatctgttc accttgttcc
+     4261 ctctaaggat aagctccaag tgattgctgc tttcctggca acttgactga gtttcactct
+     4321 cttcttttac ttcctgtttt aatgagtaac ttggaatatt tcattaacat gttctcaagt
+     4381 gatttagctg ccattctgcc attttgagtt ttgtttaatt ttatctgctt gagcacactg
+     4441 atcaaccact gacctgcctt cttgcattgt cctgcagtga cgtaagagtg acattgtgta
+     4501 tacggcttca tagttggaat ttcagagcac tgacaccaga tattctcagt ttgttctctg
+     4561 ggggaatttc atttgcatct atgtttttag ctatctgtga taacttgtta aatattaaaa
+     4621 agatattttg cttctattgg aacatttgta tactcgcaat tatatttctg taaacagctg
+     4681 cagtcaaaaa taaaacattg aaagttttca ttttgcaaaa aaaaa
+//
+

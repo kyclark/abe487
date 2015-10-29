@@ -90,6 +90,14 @@ Download/gunzip "uniprot_sprot" using the Unix command "wget":
 
 Remember: wget is not a crime (cf. Aaron Schwartz)
 
+NB: You probably found on the "obese/lean" project that you cannot add
+large files to Github.  To will prevent Git from adding files matching
+the patterns you determine, create a ".gitignore" file in your
+"week10" directory like this:
+
+    $ cat .gitignore
+    uniprot*
+
 Use "Bio::SeqIO" and "Bio::DB::Fasta" to write a Perl script to
 retrieve all IDs from a FASTA file matching a given pattern using
 a regular expression match.

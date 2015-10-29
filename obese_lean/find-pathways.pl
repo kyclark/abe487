@@ -4,22 +4,42 @@ use strict;
 use warnings;
 use autodie;
 use feature 'say';
+use List::Util 'max';
 use Data::Dumper;
+use Text::TabularDisplay;
+use Getopt::Long 'GetOptions';
 
-@ARGV or die "No input files.\n";
+my %args = (format => 'text');
+GetOptions(\%args, 'format:s');
 
 my $pathway_file = 'kegg_to_path';
 unless (-e $pathway_file) {
     die "Cannot find pathway file ($pathway_file).\n";
 }
 
-my %core = find_pathways($pathway_file, 'core');
-my %var  = find_pathways($pathway_file, 'variable');
-my %all  = (%core, %var);
+my %core    = find_pathways($pathway_file, 'core');
+my %var     = find_pathways($pathway_file, 'variable');
+my %all     = (%core, %var);
+my $longest = max(map { length($_) } keys %all);
+my $tab     = Text::TabularDisplay->new(qw'Pathway Core Vary');
 
+my @out;
 for my $pname (sort keys %all) {
-    printf "%-35s core %5.2f%% var %5.2f%%\n", 
+    $tab->add(
+        $pname, 
+        map { sprintf('%5.2f%%', $_) }
+        $core{$pname} || 0, $var{$pname} || 0
+    );
+
+    push @out, sprintf "%-${longest}s core %5.2f%% var %5.2f%%", 
         $pname, $core{$pname} || 0, $var{$pname} || 0;
+}
+
+if ($args{'format'} eq 'table') {
+    say $tab->render;
+}
+else {
+    say join "\n", @out;
 }
 
 # --------------------------------------------------

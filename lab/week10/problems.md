@@ -54,6 +54,7 @@ given output directory (default the current working directory).
 
 Modules/functions you might find useful:
 
+* Cwd 'cwd'
 * File::Spec::Functions 'catfile'
 * File::Basename 'basename'
 * File::Path 'make_path'

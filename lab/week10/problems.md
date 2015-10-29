@@ -5,12 +5,18 @@
 
 # Install Bio::Perl
 
-    $ cpam --look Bio::Perl
+    $ cpanm --look Bio::Perl
     $ perl Build.PL
     $ ./Build install
 
-Accept all defaults, esp. allowing BioPerl to install sample scripts, then
-go into your ~/perl5/bin dir and have a look.
+NB: The command "cpanm --look" downloads the module, unpacks it, and 
+then creates a new shell inside the distribution directory.  When you 
+are finished, press ctrl-D to exit the shell.  If for some reason you
+are not in the newly create distribution directory, cd to there.
+
+After running "perl Build.PL," accept all defaults, esp. allowing
+BioPerl to install sample scripts, then go into your "~/perl5/bin" dir
+and have a look.
 
 Try one:
 

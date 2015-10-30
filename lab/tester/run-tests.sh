@@ -3,7 +3,7 @@
 student=$1
 
 week=week8
-src_dir=/Users/kyclark/work/abe487/lab/$week
+src_dir=/Users/kyclark/work/abe487/lab/week08
 in_dir=/Users/kyclark/work/students
 dirs=$(find $in_dir -mindepth 1 -maxdepth 1 -type d | grep -v meta)
 

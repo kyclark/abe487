@@ -9,10 +9,11 @@ use Data::Dumper;
 use Getopt::Long;
 use File::Basename;
 use File::Find::Rule;
+use File::Path 'remove_tree';
 use File::Spec::Functions;
 use Pod::Usage;
-use Test::More 'no_plan';
 use Test::Script::Run qw'run_script run_ok run_not_ok is_script_output';
+use Test::More; 
 
 main();
 
@@ -27,6 +28,7 @@ sub main {
         });
     }; 
 
+
     my $dir = $args{'dir'} or pod2usage('Missing input directory');
 
     unless (-d $dir) {
@@ -35,19 +37,30 @@ sub main {
 
     my $data_dir = catdir(cwd(), 'data', 'week10');
 
+    unless (-d $data_dir) {
+        pod2usage("Can't find data dir ($data_dir)");
+    }
+
+    plan(tests => 25);
+
     #
     # FASTA splitter
     #
     {
         my $t1      = catfile($dir, '01-fasta-splitter.pl');
         my $t1_dir  = catdir($dir, 'split');
-        my @t1_args = qq"-n 10 -o $t1_dir $data_dir/test.fa $data_dir/test2.fa";
+        my @t1_args = ('-n', '10', '-o', $t1_dir, 
+                      "$data_dir/test.fa", "$data_dir/test2.fa");
+
+        if (-d $t1_dir) {
+            remove_tree($t1_dir);
+        }
 
         run_not_ok($t1);
 
-        #run_ok($t1, \@t1_args, 'run');
+        run_ok($t1, \@t1_args);
 
-        ok(run_script($t1, \@t1_args), 'run');
+        ok(-d $t1_dir, "$t1_dir was created");
 
         my %t1_files = (
             'test.fa.1'  => [ 2384, 10 ],
@@ -77,14 +90,13 @@ sub main {
         my $t2 = catfile($dir, '02-fasta-search.pl');
         run_not_ok($t2);
 
+        my $t2_out = 'Z_.fa';
+        if (-e $t2_out) {
+            unlink $t2_out;
+        }
+
         run_ok($t2, [catfile($data_dir, 'uniprot.fa'), 'Z_']), 
 
-#        ok(
-#            run_script($t2, [catfile($data_dir, 'uniprot.fa'), 'Z_']), 
-#            'looking for "Z_"'
-#        );
-
-        my $t2_out = catfile($dir, 'Z_.fa');
         ok(-e $t2_out, "outfile ($t2_out) exists)");
         is(-s $t2_out, 4761, "outfile is correct size");
 
@@ -139,23 +151,21 @@ __END__
 
 =head1 NAME
 
-tester.pl - a script
+test-week10.pl - test ABE487 week 10 Perl
 
 =head1 SYNOPSIS
 
-  tester.pl -t tests.txt -d /path/to/scripts
+  test-week10.pl -d /path/to/scripts
 
 Options:
 
-  --tests  Text file of tests
   --dir    Directory containing Perl scripts to test
   --help   Show brief help and exit
   --man    Show full documentation
 
 =head1 DESCRIPTION
 
-Reads tests from an input file and applies them to the script in the 
-input directory.
+Tests week10.
 
 =head1 SEE ALSO
 

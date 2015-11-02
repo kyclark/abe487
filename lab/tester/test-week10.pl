@@ -7,6 +7,7 @@ use autodie;
 use Cwd 'cwd';
 use Data::Dumper;
 use Getopt::Long;
+use FindBin '$Bin';
 use File::Basename;
 use File::Find::Rule;
 use File::Spec::Functions;
@@ -33,7 +34,7 @@ sub main {
         pod2usage("Bad input directory ($dir)");
     }
 
-    my $data_dir = catdir(cwd(), 'data', 'week10');
+    my $data_dir = catdir($Bin, 'data', 'week10');
 
     #
     # FASTA splitter

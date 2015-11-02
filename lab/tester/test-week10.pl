@@ -12,6 +12,7 @@ use File::Basename;
 use File::Find::Rule;
 use File::Path 'remove_tree';
 use File::Spec::Functions;
+use File::Temp 'tempdir';
 use Pod::Usage;
 use Test::Script::Run qw'run_script run_ok run_not_ok is_script_output';
 use Test::More; 
@@ -49,19 +50,16 @@ sub main {
     #
     {
         my $t1      = catfile($dir, '01-fasta-splitter.pl');
-        my $t1_dir  = catdir($dir, 'split');
-        my @t1_args = ('-n', '10', '-o', $t1_dir, 
+        my $tmp_dir = tempdir();
+        my $out_dir = catdir($tmp_dir, 'split');
+        my @t1_args = ('-n', '10', '-o', $out_dir, 
                       "$data_dir/test.fa", "$data_dir/test2.fa");
-
-        if (-d $t1_dir) {
-            remove_tree($t1_dir);
-        }
 
         run_not_ok($t1);
 
         run_ok($t1, \@t1_args);
 
-        ok(-d $t1_dir, "$t1_dir was created");
+        ok(-d $out_dir, "$out_dir was created");
 
         my %t1_files = (
             'test.fa.1'  => [ 2384, 10 ],
@@ -72,7 +70,7 @@ sub main {
         );
 
         for my $file (sort keys %t1_files) {
-            my $path = catfile($t1_dir, $file);
+            my $path = catfile($out_dir, $file);
             ok(-e $path, "$file exists");
 
             my ($size, $nseqs) = @{ $t1_files{ $file } };
@@ -82,6 +80,8 @@ sub main {
             my $nfseqs = grep { /^>/ } <$fh>;
             is($nseqs, $nfseqs, "nseqs = $nseqs");
         }
+
+        remove_tree($tmp_dir);
     }
      
     #

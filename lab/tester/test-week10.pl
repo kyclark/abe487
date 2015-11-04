@@ -30,8 +30,7 @@ sub main {
         });
     }; 
 
-
-    my $dir = $args{'dir'} or pod2usage('Missing input directory');
+    my $dir = $args{'dir'} || cwd();
 
     unless (-d $dir) {
         pod2usage("Bad input directory ($dir)");
@@ -74,7 +73,7 @@ sub main {
             ok(-e $path, "$file exists");
 
             my ($size, $nseqs) = @{ $t1_files{ $file } };
-            is(-s $path, $size, "size = $size");
+            is(-s $path, $size, "$file size = $size");
 
             open my $fh, '<', $path;
             my $nfseqs = grep { /^>/ } <$fh>;

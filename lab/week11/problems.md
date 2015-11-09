@@ -22,10 +22,10 @@ every HSP and print in a tab delimited format:
 * Hit Name
 * HSP Evalue
 
-    $ ./03-bio-searchio.pl
+    $ ./01-bio-searchio.pl
     Usage: 03-bio-searchio.pl blast.out
     
-    $ ./03-bio-searchio.pl query_v_sprot.blastout > hits.tab
+    $ ./01-bio-searchio.pl query_v_sprot.blastout > hits.tab
 
     $ wc -l hits.tab
     111 hits.tab

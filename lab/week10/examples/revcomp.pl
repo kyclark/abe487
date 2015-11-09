@@ -15,6 +15,8 @@ my $seqio = Bio::SeqIO->new(
 );
 
 while (my $seq = $seqio->next_seq()) {
+    #my $rc_obj = $seq->revcom;
+    #my $rc     = $rc_obj->seq;
     say join "\n", 
         '>' . join(' ', $seq->id, $seq->desc, '[RC]'), 
         $seq->revcom->seq;

@@ -181,7 +181,6 @@ use Getopt::Long;
 use Pod::Usage;
 
 my %opts = get_opts();
-my @args = @ARGV;
 
 if ($opts{'help'} || $opts{'man'}) {
     pod2usage({
@@ -189,6 +188,13 @@ if ($opts{'help'} || $opts{'man'}) {
         -verbose => $opts{'man'} ? 2 : 1
     });
 }
+
+#
+# Start coding here
+#
+
+# If you need @ARGV
+# my @args = @ARGV;
 
 say "OK";
 

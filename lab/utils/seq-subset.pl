@@ -2,18 +2,20 @@
 
 $| = 1;
 
-use common::sense;
+use strict;
+use feature 'say';
 use autodie;
 use Bio::SeqIO;
 use Cwd 'cwd';
-use Getopt::Long;
+use File::Copy 'copy';
 use File::Basename 'basename';
-use File::RandomLine;
 use File::Path 'make_path';
-use File::Temp 'tempfile';
+use File::RandomLine;
 use File::Spec::Functions 'catfile';
+use File::Temp 'tempfile';
+use Getopt::Long;
+use List::Util 'min';
 use Pod::Usage;
-use Readonly;
 
 main();
 
@@ -40,8 +42,10 @@ sub main {
         make_path($out_dir);
     }
 
+    FILE:
     for my $file (@ARGV) {
-        my $basename = basename($file);
+        my $basename    = basename($file);
+        my $subset_file = catfile($out_dir, $basename . '.sub');
 
         printf "%5d: %s", ++$file_num, $basename;
 
@@ -54,7 +58,14 @@ sub main {
         }
         close $tmp_fh;
 
-        say " ($count)";
+        if ($count < $number) {
+            say " ($count < $number, so copying)";
+            copy $file, $subset_file;
+            next FILE;
+        }
+        else {
+            say '';
+        }
 
         my $random = File::RandomLine->new(
             $tmp_filename, 
@@ -62,18 +73,21 @@ sub main {
         ); 
 
         my %take;
-        while (scalar(keys %take) < $number) {
+        my $taken = 0;
+        my $min = min($number, $count);
+        while ($taken < $min) {
             my $id = $random->next;
             $take{ $id }++;
+            $taken = scalar(keys %take);
         }
 
-        my $subset_file = catfile($out_dir, $basename . '.sub');
-        my $in = Bio::SeqIO->new(-file => $file, -format => $out_fmt);
+        my $in = Bio::SeqIO->new(-file => $file, -format => $in_fmt);
         my $out= Bio::SeqIO->new( 
-            -format => 'Fasta', 
+            -format => $out_fmt,
             -file => ">$subset_file"
         );
 
+        my $i = 0;
         while (my $seq = $in->next_seq) {
             $out->write_seq($seq) if exists $take{ $seq->id };
         }

@@ -2,8 +2,8 @@
 
 student=$1
 
-week=week8
-src_dir=/Users/kyclark/work/abe487/lab/week08
+week=week9
+src_dir=/Users/kyclark/work/abe487/lab/week09
 in_dir=/Users/kyclark/work/students
 dirs=$(find $in_dir -mindepth 1 -maxdepth 1 -type d | grep -v meta)
 
@@ -17,7 +17,7 @@ for dir in $dirs; do
   if [[ -d $test_dir ]]; then
       let i++
       printf "%5d: %s\n" $i $dir
-      cp $src_dir/*.{txt,fa} $test_dir
+      #cp $src_dir/*.{txt,fa} $test_dir
       ./tester.pl -d $test_dir -t ${week}.conf > $test_dir/test-out 2>&1
   else
       echo \"$test_dir\" does not exist

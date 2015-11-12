@@ -72,7 +72,7 @@ sub read_tests {
         my %rec;
         for my $line (split(/\n/, $section)) {
             next unless $line;
-            if ($line =~ /^(\w+)\s*:\s*(.+)$/) {
+            if ($line =~ /^(\w+)\s*:\s{1}(.+)$/) {
                 my ($key, $value) = ($1, $2);
 
                 if ($key =~ /^std/) {

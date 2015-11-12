@@ -19,9 +19,9 @@ Write a script to parse your Blast output using "Bio::SearchIO."
 For hits with "significance" less than or equal to 1e-50 retrieve 
 every HSP and print in a tab delimited format:
 
-* Query Name
-* Hit Name
-* HSP Evalue
+* Query Name ($hsp->query_string)
+* Hit Name ($hsp->hit_string)
+* HSP Evalue ($hsp->evalue)
 
     $ ./01-bio-searchio.pl
     Usage: 03-bio-searchio.pl blast.out

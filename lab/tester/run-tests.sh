@@ -16,10 +16,9 @@ for dir in $dirs; do
   test_dir=$dir/$week
   if [[ -d $test_dir ]]; then
       let i++
-      printf "%5d: %s\n" $i $(basename $dir)
+      printf "%5d: %s\n" $i $dir
       #cp $src_dir/*.{txt,fa} $test_dir
-      #./tester.pl -d $test_dir -t ${week}.conf > $test_dir/test-out 2>&1
-      ./test-week10.pl -d $test_dir 2>&1 | tee $test_dir/test-out $(basename $dir)-out
+      ./tester.pl -d $test_dir -t ${week}.conf > $test_dir/test-out 2>&1
   else
       echo \"$test_dir\" does not exist
   fi

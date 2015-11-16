@@ -10,7 +10,8 @@ Run the following commands to format the file for using as a BLAST database:
 Select three sequences from the "HDAC.fa" file:
 
     $ ./parse-fasta.pl HDAC.fa 3 > query.fa
-    $ blastp -query query.fa -db uniprot_sprot.fasta -evalue 1e-10 -out query_v_sprot.blastout
+    $ blastp -query query.fa -db uniprot_sprot.fasta -evalue 1e-10 \
+      -out query_v_sprot.blastout
             
 Cf: BLAST+ at http://www.ncbi.nlm.nih.gov/books/NBK1763/
 

@@ -75,9 +75,11 @@ sub main {
             my ($size, $nseqs) = @{ $t1_files{ $file } };
             is(-s $path, $size, "$file size = $size");
 
-            open my $fh, '<', $path;
-            my $nfseqs = grep { /^>/ } <$fh>;
-            is($nseqs, $nfseqs, "nseqs = $nseqs");
+            if (-e $path) {
+                open my $fh, '<', $path;
+                my $nfseqs = grep { /^>/ } <$fh>;
+                is($nseqs, $nfseqs, "nseqs = $nseqs");
+            }
         }
 
         remove_tree($tmp_dir);
@@ -100,9 +102,11 @@ sub main {
         ok(-e $t2_out, "outfile ($t2_out) exists)");
         is(-s $t2_out, 4761, "outfile is correct size");
 
-        open my $fh, '<', $t2_out;
-        my $nseqs = grep { /^>/ } <$fh>;
-        is($nseqs, 23, "nseqs = 23");
+        if (-e $t2_out) {
+            open my $fh, '<', $t2_out;
+            my $nseqs = grep { /^>/ } <$fh>;
+            is($nseqs, 23, "nseqs = 23");
+        }
     }
 
     #

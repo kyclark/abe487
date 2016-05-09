@@ -18,7 +18,13 @@ for dir in $dirs; do
       let i++
       printf "%5d: %s\n" $i $dir
       #cp $src_dir/*.{txt,fa} $test_dir
-      ./tester.pl -d $test_dir -t ${week}.conf > $test_dir/test-out 2>&1
+      #./tester.pl -d $test_dir -t ${week}.conf > $test_dir/test-out 2>&1
+      ./test-week10.pl -d $test_dir > $test_dir/test-out 2>&1
+      cd $test_dir
+      git add test-out
+      git commit -m 'week10 test-out' test-out
+      git push
+      cd -
   else
       echo \"$test_dir\" does not exist
   fi

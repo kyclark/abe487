@@ -1,14 +1,14 @@
 #!/usr/bin/env perl6
 
 sub MAIN (Str $dna!) {
-    my %count = A => 0, C => 0, G => 0, T => 0;;
+    my ($num-A, $num-C, $num-G, $num-T) = 0, 0, 0, 0;
 
     for $dna.lc.comb {
-        when 'a' { %count<A>++ }
-        when 'c' { %count<C>++ }
-        when 'g' { %count<G>++ }
-        when 't' { %count<T>++ }
+        when 'a' { $num-A++ }
+        when 'c' { $num-C++ }
+        when 'g' { $num-G++ }
+        when 't' { $num-T++ }
     }
 
-    put join ' ', %count<A C T G>;
+    put ($num-A, $num-C, $num-G, $num-T).join(' ');
 }

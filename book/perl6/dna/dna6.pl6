@@ -1,7 +1,7 @@
 #!/usr/bin/env perl6
 
 sub MAIN (Str $dna!) {
-    my %count;
+    my %count = A => 0, C => 0, G => 0, T => 0;;
 
     for $dna.lc.comb {
         when 'a' { %count<A>++ }
@@ -10,5 +10,5 @@ sub MAIN (Str $dna!) {
         when 't' { %count<T>++ }
     }
 
-    put join ' ', %count<A C T G>.map({ $_ // 0 });
+    put join ' ', %count<A C T G>;
 }

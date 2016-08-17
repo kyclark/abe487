@@ -1,8 +1,8 @@
-test:
-	./test.pl6
-
 run:
 	./dna.pl6 AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC
 
 file:
 	./dna.pl6 test.txt
+
+test:
+	./test.pl6

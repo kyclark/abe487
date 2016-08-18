@@ -12,6 +12,11 @@ my $searchio  = Bio::SearchIO->new(
     -file     => $blast_out,
 );
 
+my $foo       = Bio::SearchIO->new( 
+    -format   => 'bar',
+    -file     => $blast_out,
+);
+
 say join "\t", qw[query hit evalue];
 while (my $result = $searchio->next_result ) {
     while (my $hit = $result->next_hit) {

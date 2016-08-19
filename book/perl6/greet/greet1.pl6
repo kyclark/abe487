@@ -1,10 +1,10 @@
 #!/usr/bin/env perl6
 
 unless (1 <= @*ARGS.elems <= 2) {
-    printf "Usage: %s GREETING [NAME]\n", $*SPEC.basename($*PROGRAM-NAME);
+    note "Usage:\n\t{$*PROGRAM-NAME.IO.basename} GREETING [NAME]";
     exit 1;
 }
 
 my ($greeting, $name) = @*ARGS;
 
-put "$greeting, {$name // 'Stranger'}!";
+put "$greeting, {$name // 'Stranger'}";

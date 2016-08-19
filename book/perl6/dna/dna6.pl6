@@ -10,5 +10,5 @@ sub MAIN (Str $dna!) {
         when 't' { %count<T>++ }
     }
 
-    put join ' ', %count<A C T G>;
+    put join ' ', %count<A C G T>;
 }

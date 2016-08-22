@@ -2,9 +2,7 @@
 
 use Bio::SeqIO;
 
-sub MAIN (Str $file!, Int :$k=10) {
-    die "Not a file ($file)" unless $file.IO.f;
-
+sub MAIN (Str $file! where *.IO.f, UInt :$k=10) {
     my $seqIO = Bio::SeqIO.new(format => 'fasta', file => $file);
 
     while (my $seq = $seqIO.next-Seq) {

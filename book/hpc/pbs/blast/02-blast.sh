@@ -13,7 +13,7 @@ source common.sh
 
 SPLIT_DIR="$OUT_DIR/split"
 
-if [[ ! -d $SPLIT_DIR ]]; then
+if [[ ! -d "$SPLIT_DIR" ]]; then
   echo "Cannot find SPLIT_DIR \"$SPLIT_DIR\""
   exit 1
 fi
@@ -23,14 +23,14 @@ find "$SPLIT_DIR" -type f > $TMP_FILES
 NUM_FILES=$(lc $TMP_FILES)
 
 if [[ $NUM_FILES -lt 1 ]]; then
-  echo "Found no files in SPLIT_DIR \"$SPLIT_DIR\"
+  echo "Found no files in SPLIT_DIR \"$SPLIT_DIR\""
   exit 1
 fi
 
 BLAST_OUT="$OUT_DIR/blast-out"
 
-if [[ ! -d $BLAST_OUT ]]; then
-  mkdir -p $BLAST_OUT
+if [[ ! -d "$BLAST_OUT" ]]; then
+  mkdir -p "$BLAST_OUT"
 fi
 
 echo "Started BLAST $(date)"
@@ -46,7 +46,6 @@ while read FILE; do
   OUT_FILE="$BLAST_OUT/$BASENAME"
 
   blastn -query "$FILE" -out "$OUT_FILE" -outfmt 8 -db $BLAST_DB
-
 done < $TMP_FILES
 
 rm $TMP_FILES

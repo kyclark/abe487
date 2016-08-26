@@ -1,7 +1,8 @@
 #!/bin/bash
 
-#PBS -l jobtype=cluster_only
-#PBS -l select=1:ncpus=2:mem=4gb
+#PBS -l jobtype=htc_only
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -l place=pack:shared
 #PBS -l walltime=24:00:00
 #PBS -l cput=24:00:00
 
@@ -28,9 +29,11 @@ fi
 
 echo "Started splitting $(date)"
 
-while read FILE; do
-  /rsgrps/bhurwitz/hurwitzlab/bin/faSplit about $FILE ${MAX_FASTA_SIZE:-100000000} "$SPLIT_DIR" 
-done < $TMP_FILES
+./workers/fasta-split.pl6 --in-dir="$FASTA_DIR" --out-dir="$SPLIT_DIR" --max=10000
+
+#while read FILE; do
+#  /rsgrps/bhurwitz/hurwitzlab/bin/faSplit about $FILE ${MAX_FASTA_SIZE:-100000000} "$SPLIT_DIR" 
+#done < $TMP_FILES
 
 rm $TMP_FILES
 

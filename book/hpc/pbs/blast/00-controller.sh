@@ -8,7 +8,7 @@ QUEUE="standard"
 GROUP="bhurwitz"
 RUN_STEP=""
 MAIL_USER=""
-MAIL_TYPE="BEA"
+MAIL_TYPE="bea"
 
 function HELP() {
   printf "Usage:\n  %s -f FASTA_DIR -b BLAST_DB -o OUT_DIR\n\n" $(basename $0)
@@ -136,9 +136,8 @@ for STEP in $(ls 0[1-9]*.sh); do
 
   CMD="qsub $ARGS $CWD/$STEP"
   JOB_ID=$($CMD)
-  JOB_ID=$(echo $JOB_ID | sed "s/\..*//")
 
-  if [[ $JOB_ID -lt 1 ]]; then 
+  if [[ ${#JOB_ID} -lt 1 ]]; then 
     echo Failed to get JOB_ID from \"$CMD\"
     exit 1
   fi

@@ -1,7 +1,8 @@
 #!/bin/bash
 
-#PBS -l jobtype=cluster_only
-#PBS -l select=1:ncpus=2:mem=4gb
+#PBS -l jobtype=htc_only
+#PBS -l select=1:ncpus=1:mem=1gb
+#PBS -l place=pack:shared
 #PBS -l walltime=24:00:00
 #PBS -l cput=24:00:00
 
